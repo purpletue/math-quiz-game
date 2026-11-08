@@ -1,39 +1,63 @@
-body {
-    background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("mathbg.webp") center / cover no-repeat fixed;
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("mathbg.webp") center / cover no-repeat fixed;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+
+  /* centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
 }
+
 h1 {
-    color: white;
-    font-family: "Syne", sans-serif;
-    font-weight: 800;
+  color: white;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  margin: 0;
 }
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
 button {
-    font-family: "Syne", sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    color: #0a0a0f;
-    background: #5eff93;
-    border: 2px solid #5eff93;
-    border-radius: 4px;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #0a0a0f;
+  background: #5eff93;
+  border: 2px solid #5eff93;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
 button:hover {
-    background: transparent;
-    color: #5eff93;
+  background: transparent;
+  color: #5eff93;
 }
+
 button:active {
   transform: scale(0.95);
 }
-button:focus-visible{
-    outline: 2px solid magenta;
-    outline-offset: 3px;
+
+button:focus-visible {
+  outline: 2px solid magenta;
+  outline-offset: 3px;
 }
-.name{
-  font-family: inherit;
+
+.name {
   font-size: 1rem;
   color: #e0e0e0;
   background: #14141c;
@@ -43,15 +67,17 @@ button:focus-visible{
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.name::placeholder{
-    color: #666;
+
+.name::placeholder {
+  color: #666;
 }
-.name:focus{
-    border-color: magenta;
-    box-shadow: 0 0 10px rgba(0, 255, 240, 0.4);
+
+.name:focus {
+  border-color: magenta;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
 }
+
 .number {
-  font-family: inherit;
   font-size: 1rem;
   color: #e0e0e0;
   background: #14141c;
@@ -72,4 +98,29 @@ button:focus-visible{
 .number::-webkit-inner-spin-button,
 .number::-webkit-outer-spin-button {
   opacity: 1;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+    gap: 12px;
+    background-attachment: scroll; /* fixed backgrounds are janky on phones */
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .name,
+  .number,
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem; /* keep at 16px+ or iOS zooms in on the input */
+  }
+
+  button {
+    padding: 14px 24px; /* bigger tap target */
+  }
 }
