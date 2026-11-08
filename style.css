@@ -1,0 +1,75 @@
+body {
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("mathbg.webp") center / cover no-repeat fixed;
+
+}
+h1 {
+    color: white;
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+}
+button {
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0a0a0f;
+    background: #5eff93;
+    border: 2px solid #5eff93;
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button:hover {
+    background: transparent;
+    color: #5eff93;
+}
+button:active {
+  transform: scale(0.95);
+}
+button:focus-visible{
+    outline: 2px solid magenta;
+    outline-offset: 3px;
+}
+.name{
+  font-family: inherit;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: #14141c;
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.name::placeholder{
+    color: #666;
+}
+.name:focus{
+    border-color: magenta;
+    box-shadow: 0 0 10px rgba(0, 255, 240, 0.4);
+}
+.number {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: #14141c;
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color-scheme: dark;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.number:focus {
+  border-color: #00fff0;
+  box-shadow: 0 0 10px rgba(0, 255, 240, 0.4);
+}
+
+/* keep the arrows visible all the time (Chrome/Safari/Edge) */
+.number::-webkit-inner-spin-button,
+.number::-webkit-outer-spin-button {
+  opacity: 1;
+}
