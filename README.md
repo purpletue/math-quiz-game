@@ -5,6 +5,8 @@ So h1 basically explains it. i made this project to learn javascript and how to 
 - an existing user interface.
 - it knows your name.
 - thats pretty much it.
+## Publishing
+This project is published as a [website](https://math-quiz-game-eta.vercel.app) and an android application. 
 ## AI usage declaration
 i used no ai in the coding of this project, but i used it as a way to learn javascript.
 ## License, credits, and date
